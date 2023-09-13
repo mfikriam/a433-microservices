@@ -1,0 +1,57 @@
+proyek-pertama-item-db-1  | 2023-09-13T17:42:30.717+0000 I CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=99ecddbd31fd
+proyek-pertama-item-db-1  | 2023-09-13T17:42:30.722+0000 I CONTROL  [initandlisten] db version v3.6.23
+proyek-pertama-item-db-1  | 2023-09-13T17:42:30.722+0000 I CONTROL  [initandlisten] git version: d352e6a4764659e0d0350ce77279de3c1f243e5c
+proyek-pertama-item-db-1  | 2023-09-13T17:42:30.722+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+proyek-pertama-item-db-1  | 2023-09-13T17:42:30.722+0000 I CONTROL  [initandlisten] allocator: tcmalloc
+proyek-pertama-item-db-1  | 2023-09-13T17:42:30.722+0000 I CONTROL  [initandlisten] modules: none
+proyek-pertama-item-db-1  | 2023-09-13T17:42:30.722+0000 I CONTROL  [initandlisten] build environment:
+proyek-pertama-item-db-1  | 2023-09-13T17:42:30.722+0000 I CONTROL  [initandlisten]     distmod: ubuntu1604
+proyek-pertama-item-db-1  | 2023-09-13T17:42:30.722+0000 I CONTROL  [initandlisten]     distarch: x86_64
+proyek-pertama-item-db-1  | 2023-09-13T17:42:30.722+0000 I CONTROL  [initandlisten]     target_arch: x86_64
+proyek-pertama-item-db-1  | 2023-09-13T17:42:30.722+0000 I CONTROL  [initandlisten] options: { net: { bindIpAll: true } }
+proyek-pertama-item-db-1  | 2023-09-13T17:42:30.723+0000 I STORAGE  [initandlisten] 
+proyek-pertama-item-db-1  | 2023-09-13T17:42:30.723+0000 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+proyek-pertama-item-db-1  | 2023-09-13T17:42:30.723+0000 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+proyek-pertama-item-db-1  | 2023-09-13T17:42:30.723+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=2619M,cache_overflow=(file_max=0M),session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),compatibility=(release="3.0",require_max="3.0"),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+proyek-pertama-item-db-1  | 2023-09-13T17:42:31.382+0000 I STORAGE  [initandlisten] WiredTiger message [1694626951:382601][1:0x7f57df526a40], txn-recover: Set global recovery timestamp: 0
+proyek-pertama-item-db-1  | 2023-09-13T17:42:31.547+0000 I CONTROL  [initandlisten] 
+proyek-pertama-item-db-1  | 2023-09-13T17:42:31.547+0000 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+proyek-pertama-item-db-1  | 2023-09-13T17:42:31.547+0000 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+proyek-pertama-item-db-1  | 2023-09-13T17:42:31.547+0000 I CONTROL  [initandlisten] 
+proyek-pertama-item-db-1  | 2023-09-13T17:42:31.547+0000 I CONTROL  [initandlisten] 
+proyek-pertama-item-db-1  | 2023-09-13T17:42:31.547+0000 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+proyek-pertama-item-db-1  | 2023-09-13T17:42:31.547+0000 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+proyek-pertama-item-db-1  | 2023-09-13T17:42:31.547+0000 I CONTROL  [initandlisten] 
+proyek-pertama-item-db-1  | 2023-09-13T17:42:31.563+0000 I STORAGE  [initandlisten] createCollection: admin.system.version with provided UUID: 14c332cb-ea22-469f-bf96-5f3b151ff961
+proyek-pertama-item-db-1  | 2023-09-13T17:42:31.627+0000 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.6
+proyek-pertama-item-db-1  | 2023-09-13T17:42:31.632+0000 I STORAGE  [initandlisten] createCollection: local.startup_log with generated UUID: c8c6f6c8-99b8-4236-a00f-4c6efe2e6fd9
+proyek-pertama-item-db-1  | 2023-09-13T17:42:31.685+0000 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+proyek-pertama-item-db-1  | 2023-09-13T17:42:31.686+0000 I STORAGE  [LogicalSessionCacheRefresh] createCollection: config.system.sessions with generated UUID: ae54f8d8-a4de-48a6-93f2-246604fa14e5
+proyek-pertama-item-db-1  | 2023-09-13T17:42:31.686+0000 I NETWORK  [initandlisten] listening via socket bound to 0.0.0.0
+proyek-pertama-item-db-1  | 2023-09-13T17:42:31.686+0000 I NETWORK  [initandlisten] listening via socket bound to /tmp/mongodb-27017.sock
+proyek-pertama-item-db-1  | 2023-09-13T17:42:31.686+0000 I NETWORK  [initandlisten] waiting for connections on port 27017
+proyek-pertama-item-db-1  | 2023-09-13T17:42:31.748+0000 I INDEX    [LogicalSessionCacheRefresh] build index on: config.system.sessions properties: { v: 2, key: { lastUse: 1 }, name: "lsidTTLIndex", ns: "config.system.sessions", expireAfterSeconds: 1800 }
+proyek-pertama-item-db-1  | 2023-09-13T17:42:31.748+0000 I INDEX    [LogicalSessionCacheRefresh] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+proyek-pertama-item-db-1  | 2023-09-13T17:42:31.751+0000 I INDEX    [LogicalSessionCacheRefresh] build index done.  scanned 0 total records. 0 secs
+proyek-pertama-item-db-1  | 2023-09-13T17:42:33.862+0000 I NETWORK  [listener] connection accepted from 172.19.0.3:42030 #1 (1 connection now open)
+proyek-pertama-item-db-1  | 2023-09-13T17:42:33.873+0000 I NETWORK  [conn1] received client metadata from 172.19.0.3:42030 conn1: { driver: { name: "nodejs", version: "2.2.36" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.10.16.3-microsoft-standard-WSL2" }, platform: "Node.js v14.21.3, LE, mongodb-core: 2.1.20" }
+proyek-pertama-item-db-1  | 2023-09-13T17:42:48.062+0000 I STORAGE  [conn1] createCollection: accumulator.documents with generated UUID: a6f95a06-6c8e-4641-b952-a11c4e16514f
+proyek-pertama-item-db-1  | 2023-09-13T17:42:48.387+0000 I COMMAND  [conn1] command accumulator.documents command: insert { insert: "documents", ordered: true, $db: "accumulator" } ninserted:1 keysInserted:1 numYields:0 reslen:44 locks:{ Global: { acquireCount: { r: 3, w: 3 } }, Database: { acquireCount: { w: 2, W: 1 } }, Collection: { acquireCount: { w: 2 } } } protocol:op_query 329ms
+proyek-pertama-item-app-1  | 
+proyek-pertama-item-app-1  | 
+proyek-pertama-item-app-1  | > docker-software-delivery@1.0.0 start /app
+proyek-pertama-item-app-1  | > node ./bin/www
+proyek-pertama-item-app-1  | 
+proyek-pertama-item-app-1  | 
+proyek-pertama-item-app-1  | NODE_ENV: production
+proyek-pertama-item-app-1  | Connected to database
+proyek-pertama-item-app-1  | [0mGET / [32m200 [0m546.670 ms - 785[0m
+proyek-pertama-item-app-1  | [0mGET /javascripts/dist/dist.min.js [32m200 [0m53.239 ms - 186999[0m
+proyek-pertama-item-app-1  | [0mGET /stylesheets/style.css [32m200 [0m80.358 ms - 519[0m
+proyek-pertama-item-app-1  | [0mGET /api [32m200 [0m14.112 ms - 2[0m
+proyek-pertama-item-app-1  | [0mPOST /api [32m201 [0m477.033 ms - 48[0m
+proyek-pertama-item-app-1  | [0mPOST /api [32m201 [0m2.580 ms - 48[0m
+proyek-pertama-item-app-1  | [0mGET / [36m304 [0m2.163 ms - -[0m
+proyek-pertama-item-app-1  | [0mGET /stylesheets/style.css [36m304 [0m3.240 ms - -[0m
+proyek-pertama-item-app-1  | [0mGET /javascripts/dist/dist.min.js [36m304 [0m0.891 ms - -[0m
+proyek-pertama-item-app-1  | [0mGET /api [32m200 [0m5.702 ms - 99[0m

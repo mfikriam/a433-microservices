@@ -1,0 +1,34 @@
+# Menggunakan Docker Compose versi 3.7
+version: '3.7'
+
+# Mendefinisikan service yang digunakan untuk menjalankan aplikasi
+services:
+  # Service 1: item-app
+  item-app:
+    # Menggunakan image dari Github Container Registry
+    image: ghcr.io/mfikriam/item-app:v1
+    # Mapping port 8080 pada container ke port 80 pada host
+    ports:
+      - 80:8080
+    # Service item-app akan berjalan setelah service item-db diluncurkan
+    depends_on:
+      - item-db
+    # Service akan melakukan restart ketika terhenti
+    restart: always
+
+  # Service 2: Mongo Database
+  item-db:
+    # Menggunakan image mongo versi 3 dari Docker Hub
+    image: mongo:3
+    # Ekspos port 27017 sebagai port di mana service berlajan
+    ports:
+      - 27017:27017
+    # Menggunakan volume app-db dengan target /data/db
+    volumes:
+      - app-db:/data/db
+    # Service akan melakukan restart ketika terhenti
+    restart: always
+
+# Membuat volume app-db
+volumes:
+  app-db:
