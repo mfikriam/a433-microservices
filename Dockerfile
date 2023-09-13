@@ -16,5 +16,5 @@ RUN npm install --production --unsafe-perm && npm run build
 # 6. Ekspos port 8080 sebagai port di mana apikasi berlajan
 EXPOSE 8080
 
-# 7. Menlajankan perintah npm start pada saat container diluncurkan
+# 7. Menjalankan perintah npm start pada saat container diluncurkan
 CMD ["npm", "start"]
