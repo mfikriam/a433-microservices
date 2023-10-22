@@ -26,7 +26,7 @@ jobs:
       - checkout
       - run: go test -v -short --count=1 $(go list ./...)
 
-  # Builds and pushes the backend application image to Docker Hub
+  # Builds and pushes the backend application image to GitHub Container Registry
   build-app-karsajobs:
     executor: docker
     requires:
@@ -42,12 +42,6 @@ jobs:
 # Workflows
 workflows:
   backend:
-    # Triggers the workflow whenever a commit is pushed to the `karsajobs` branch
-    branches:
-      only:
-        - karsajobs
-
-    # Jobs
     jobs:
       - lint-dockerfile
       - test-app
