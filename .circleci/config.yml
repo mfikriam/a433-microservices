@@ -1,0 +1,33 @@
+version: 2.1
+
+executors:
+  docker:
+    docker:
+      - image: docker:stable
+
+# Jobs
+jobs:
+  # Lints the Dockerfile file
+  lint-dockerfile:
+    executor: docker
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Run hadolint
+          command: docker run --rm -i hadolint/hadolint < Dockerfile
+
+  # Builds and pushes the frontend application image to GitHub Container Registry
+  build-app-karsajobs-ui:
+    executor: docker
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run: 'sh build_push_image_karsajobs_ui.sh'
+
+# Workflows
+workflows:
+  karsajobs-frontend:
+    jobs:
+      - lint-dockerfile
+      - build-app-karsajobs-ui
