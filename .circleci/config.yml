@@ -5,44 +5,50 @@ executors:
     docker:
       - image: docker:stable
 
+# Jobs
+jobs:
+  # Lints the Dockerfile file
+  lint-dockerfile:
+    executor: docker
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Run hadolint
+          command: docker run --rm -i hadolint/hadolint < Dockerfile
+
+  # Runs the unit tests for the backend application
+  test-app:
+    executor: docker
+    docker:
+      - image: cimg/go:1.19.3
+    steps:
+      - checkout
+      - run: go test -v -short --count=1 $(go list ./...)
+
+  # Builds and pushes the backend application image to Docker Hub
+  build-app-karsajobs:
+    executor: docker
+    requires:
+      - lint-dockerfile
+      - test-app
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build and push app image
+          command: sh build_push_image_karsajobs.sh
+
 # Workflows
 workflows:
   backend:
-    # Triggers the workflow whenever a commit is pushed to the `backend` branch
+    # Triggers the workflow whenever a commit is pushed to the `karsajobs` branch
     branches:
       only:
         - karsajobs
 
     # Jobs
     jobs:
-      # Lints the Dockerfile file
-      - lint-dockerfile:
-          executor: docker
-          steps:
-            - checkout
-            - setup_remote_docker
-            - run:
-                name: Run hadolint
-                command: docker run --rm -i hadolint/hadolint < Dockerfile
-
-      # Runs the unit tests for the backend application
-      - test-app:
-          executor: docker
-          docker:
-            - image: cimg/go:1.19.3
-          steps:
-            - checkout
-            - run: go test -v -short --count=1 $(go list ./...)
-
-      # Builds and pushes the backend application image to Docker Hub
-      - build-app-karsajobs:
-          executor: docker
-          requires:
-            - lint-dockerfile
-            - test-app
-          steps:
-            - checkout
-            - setup_remote_docker
-            - run:
-                name: Build and push app image
-                command: sh build_push_image_karsajobs.sh
+      - lint-dockerfile
+      - test-app
+      - build-app-karsajobs
