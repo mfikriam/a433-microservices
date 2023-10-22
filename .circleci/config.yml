@@ -29,9 +29,6 @@ jobs:
   # Builds and pushes the backend application image to GitHub Container Registry
   build-app-karsajobs:
     executor: docker
-    requires:
-      - lint-dockerfile
-      - test-app
     steps:
       - checkout
       - setup_remote_docker
