@@ -18,9 +18,9 @@ RUN wget -O /bin/wait-for-it.sh https://raw.githubusercontent.com/vishnubob/wait
 RUN chmod +x /bin/wait-for-it.sh
 
 # Install dependency aplikasi
-RUN npm install
+RUN npm ci
 
-# Ekspos port 8080 sebagai port di mana apikasi berlajan
+# Ekspos port 3000 sebagai port di mana apikasi berlajan
 EXPOSE 3000
 
 # Menjalankan perintah npm start pada saat container diluncurkan
