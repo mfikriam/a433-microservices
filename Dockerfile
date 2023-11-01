@@ -18,7 +18,7 @@ RUN wget -O /bin/wait-for-it.sh https://raw.githubusercontent.com/vishnubob/wait
 RUN chmod +x /bin/wait-for-it.sh
 
 # Install dependency aplikasi
-RUN npm ci
+RUN npm install
 
 # Ekspos port 3001 sebagai port di mana apikasi berlajan
 EXPOSE 3001
